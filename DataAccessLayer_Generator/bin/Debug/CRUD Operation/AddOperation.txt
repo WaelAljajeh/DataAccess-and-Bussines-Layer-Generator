@@ -1,0 +1,29 @@
+      public static int AddNew{TableName}({ParameteList})
+      {
+          int {PrimaryKeyID}= -1;
+          SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionstring);
+          string query = @"INSERT INTO {TableName}
+         ({Col})
+   VALUES
+         ({ColValue})
+        select SCOPE_IDENTITY();";
+          SqlCommand command= new SqlCommand(query, connection);
+          {Commands}
+          try
+          {
+              connection.Open();
+              object result = command.ExecuteScalar();
+              if (result != null && int.TryParse(result.ToString(), out int InsertedID))
+              {
+                  {PrimaryKeyID}= InsertedID;
+              }
+          }
+          catch (Exception ex)
+          {
+              Console.WriteLine("Error " + ex.ToString());
+          }
+          finally { connection.Close(); }
+          return {PrimaryKeyID};
+
+
+      }

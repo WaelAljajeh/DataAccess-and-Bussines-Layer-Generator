@@ -18,3 +18,22 @@ C:\Users\Laptop Home\source\repos\DataAccessLayer_Generator\obj\Debug\DataAccess
 C:\Users\Laptop Home\source\repos\DataAccessLayer_Generator\obj\Debug\DataAccessLayer_Generator.frmChooseOperations.resources
 C:\Users\Laptop Home\source\repos\DataAccessLayer_Generator\bin\Debug\GloblalLibrary.dll
 C:\Users\Laptop Home\source\repos\DataAccessLayer_Generator\bin\Debug\GloblalLibrary.pdb
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\DataAccessLayer_Generator\bin\Debug\DataAccessLayer_Generator.exe.config
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\DataAccessLayer_Generator\bin\Debug\DataAccessLayer_Generator.exe
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\DataAccessLayer_Generator\bin\Debug\DataAccessLayer_Generator.pdb
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\DataAccessLayer_Generator\bin\Debug\LogicLayerDataAccess.dll
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\DataAccessLayer_Generator\bin\Debug\GloblalLibrary.dll
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\DataAccessLayer_Generator\bin\Debug\DataAccessLayerForCodeGenerator.dll
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\DataAccessLayer_Generator\bin\Debug\LogicLayerDataAccess.pdb
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\DataAccessLayer_Generator\bin\Debug\GloblalLibrary.pdb
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\DataAccessLayer_Generator\bin\Debug\DataAccessLayerForCodeGenerator.pdb
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\DataAccessLayer_Generator\obj\Debug\Code_Generator.csproj.AssemblyReference.cache
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\DataAccessLayer_Generator\obj\Debug\DataAccessLayer_Generator.frmChooseOperations.resources
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\DataAccessLayer_Generator\obj\Debug\DataAccessLayer_Generator.frmLogin.resources
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\DataAccessLayer_Generator\obj\Debug\DataAccessLayer_Generator.frmSettiings.resources
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\DataAccessLayer_Generator\obj\Debug\DataAccessLayer_Generator.Properties.Resources.resources
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\DataAccessLayer_Generator\obj\Debug\Code_Generator.csproj.GenerateResource.cache
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\DataAccessLayer_Generator\obj\Debug\Code_Generator.csproj.CoreCompileInputs.cache
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\DataAccessLayer_Generator\obj\Debug\Code_Gen.036F2867.Up2Date
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\DataAccessLayer_Generator\obj\Debug\DataAccessLayer_Generator.exe
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\DataAccessLayer_Generator\obj\Debug\DataAccessLayer_Generator.pdb

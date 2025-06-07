@@ -48,7 +48,7 @@ namespace LogicLayerDataAccess
         {
             string DataBaseName = clsSettings.DBName;
             string ConnectString=clsDataAccessSettings.ConnectionString;
-            File.WriteAllText("F.cs",GenerateTheHeader(DataBaseName)+ GenerateTheClassOfSettings(ConnectString));
+            File.WriteAllText($"C:/Users/Laptop Home/Desktop/Doucement/Code_Generator/clsDataAccessSettings.cs", GenerateTheHeader(DataBaseName)+ GenerateTheClassOfSettings(ConnectString));
 
         }
         static string GetCommandValues(List<clsColumn> ColList)
@@ -123,7 +123,7 @@ namespace LogicLayerDataAccess
         public static string GenerateInsertMethod(clsTableLogic Table, clsColumn PrimaryKey)
         {
            
-            string FileContent = File.ReadAllText("C:\\Users\\Laptop Home\\Desktop\\Doucement\\Code_Generator_Tempelate_Files\\AddOperation.txt");
+            string FileContent = File.ReadAllText("CRUD Operation\\AddOperation.txt");
             SetMethodFeature(ref FileContent, Table, PrimaryKey,true); 
             FileContent = FileContent.Replace("{Col}", GetParameterList(Table.ColumnsList, false, false, true));
             FileContent = FileContent.Replace("{ColValue}", GetParameterList(Table.ColumnsList, false, true, true));
@@ -133,7 +133,7 @@ namespace LogicLayerDataAccess
         }
         public static string GenerateUpdateMethod(clsTableLogic Table, clsColumn PrimaryKey)
         {
-         string FileContent = File.ReadAllText("C:\\Users\\Laptop Home\\Desktop\\Doucement\\Code_Generator_Tempelate_Files\\UpdateOperation.txt");
+         string FileContent = File.ReadAllText("CRUD Operation\\UpdateOperation.txt");
         SetMethodFeature(ref FileContent, Table, PrimaryKey,false);
             FileContent = FileContent.Replace("{Col}", GetTheSetClauseInUpdateOperation(Table.ColumnsList));
             return FileContent;

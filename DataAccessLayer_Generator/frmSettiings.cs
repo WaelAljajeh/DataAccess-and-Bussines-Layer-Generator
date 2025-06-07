@@ -87,5 +87,13 @@ namespace DataAccessLayer_Generator
             }
             clsDataAccessGenerate.GenerateDataAccessSetting();
         }
+
+        private void chkSelectAll_CheckedChanged(object sender, EventArgs e)
+        {
+            for(int i=0;i< chkTableList.Items.Count;i++)
+            {
+               chkTableList.SetItemChecked(i, chkSelectAll.Checked);
+            }
+        }
     }
 }

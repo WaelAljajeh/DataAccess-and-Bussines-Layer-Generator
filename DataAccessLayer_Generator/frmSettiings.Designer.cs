@@ -34,9 +34,8 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.dgvTables = new System.Windows.Forms.DataGridView();
             this.chkTableList = new System.Windows.Forms.CheckedListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTables)).BeginInit();
+            this.chkSelectAll = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // guna2ComboBox1
@@ -99,40 +98,40 @@
             this.guna2Button2.Text = "Next";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
-            // dgvTables
-            // 
-            this.dgvTables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTables.Location = new System.Drawing.Point(140, 356);
-            this.dgvTables.Name = "dgvTables";
-            this.dgvTables.RowHeadersWidth = 51;
-            this.dgvTables.RowTemplate.Height = 26;
-            this.dgvTables.Size = new System.Drawing.Size(323, 19);
-            this.dgvTables.TabIndex = 3;
-            this.dgvTables.Visible = false;
-            // 
             // chkTableList
             // 
             this.chkTableList.FormattingEnabled = true;
-            this.chkTableList.Location = new System.Drawing.Point(155, 144);
+            this.chkTableList.Location = new System.Drawing.Point(155, 173);
             this.chkTableList.Name = "chkTableList";
             this.chkTableList.Size = new System.Drawing.Size(323, 137);
             this.chkTableList.TabIndex = 4;
+            // 
+            // chkSelectAll
+            // 
+            this.chkSelectAll.AutoSize = true;
+            this.chkSelectAll.Location = new System.Drawing.Point(155, 134);
+            this.chkSelectAll.Name = "chkSelectAll";
+            this.chkSelectAll.Size = new System.Drawing.Size(82, 21);
+            this.chkSelectAll.TabIndex = 5;
+            this.chkSelectAll.Text = "Select All";
+            this.chkSelectAll.UseVisualStyleBackColor = true;
+            this.chkSelectAll.CheckedChanged += new System.EventHandler(this.chkSelectAll_CheckedChanged);
             // 
             // frmSettiings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(618, 450);
+            this.Controls.Add(this.chkSelectAll);
             this.Controls.Add(this.chkTableList);
-            this.Controls.Add(this.dgvTables);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2ComboBox1);
             this.Name = "frmSettiings";
             this.Text = "Settings";
             this.Load += new System.EventHandler(this.frmSettiings_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTables)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -143,7 +142,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private System.Windows.Forms.DataGridView dgvTables;
         private System.Windows.Forms.CheckedListBox chkTableList;
+        private System.Windows.Forms.CheckBox chkSelectAll;
     }
 }
