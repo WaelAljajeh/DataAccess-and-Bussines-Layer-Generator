@@ -1,0 +1,9 @@
+C:\Users\Laptop Home\source\repos\DataAccessLayerForCodeGenerator\bin\Debug\DataAccessLayerForCodeGenerator.dll
+C:\Users\Laptop Home\source\repos\DataAccessLayerForCodeGenerator\bin\Debug\DataAccessLayerForCodeGenerator.pdb
+C:\Users\Laptop Home\source\repos\DataAccessLayerForCodeGenerator\obj\Debug\DataAccessLayerForCodeGenerator.csproj.AssemblyReference.cache
+C:\Users\Laptop Home\source\repos\DataAccessLayerForCodeGenerator\obj\Debug\DataAccessLayerForCodeGenerator.csproj.CoreCompileInputs.cache
+C:\Users\Laptop Home\source\repos\DataAccessLayerForCodeGenerator\obj\Debug\DataAccessLayerForCodeGenerator.dll
+C:\Users\Laptop Home\source\repos\DataAccessLayerForCodeGenerator\obj\Debug\DataAccessLayerForCodeGenerator.pdb
+C:\Users\Laptop Home\source\repos\DataAccessLayerForCodeGenerator\bin\Debug\GloblalLibrary.dll
+C:\Users\Laptop Home\source\repos\DataAccessLayerForCodeGenerator\bin\Debug\GloblalLibrary.pdb
+C:\Users\Laptop Home\source\repos\DataAccessLayerForCodeGenerator\obj\Debug\DataAcce.C942CE51.Up2Date

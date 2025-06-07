@@ -1,0 +1,11 @@
+C:\Users\Laptop Home\source\repos\LogicLayerDataAccess\bin\Debug\LogicLayerDataAccess.dll
+C:\Users\Laptop Home\source\repos\LogicLayerDataAccess\bin\Debug\LogicLayerDataAccess.pdb
+C:\Users\Laptop Home\source\repos\LogicLayerDataAccess\bin\Debug\DataAccessLayerForCodeGenerator.dll
+C:\Users\Laptop Home\source\repos\LogicLayerDataAccess\bin\Debug\DataAccessLayerForCodeGenerator.pdb
+C:\Users\Laptop Home\source\repos\LogicLayerDataAccess\obj\Debug\BussinesLayerForCodeGenerator.csproj.AssemblyReference.cache
+C:\Users\Laptop Home\source\repos\LogicLayerDataAccess\obj\Debug\BussinesLayerForCodeGenerator.csproj.CoreCompileInputs.cache
+C:\Users\Laptop Home\source\repos\LogicLayerDataAccess\obj\Debug\Bussines.666306BA.Up2Date
+C:\Users\Laptop Home\source\repos\LogicLayerDataAccess\obj\Debug\LogicLayerDataAccess.dll
+C:\Users\Laptop Home\source\repos\LogicLayerDataAccess\obj\Debug\LogicLayerDataAccess.pdb
+C:\Users\Laptop Home\source\repos\LogicLayerDataAccess\bin\Debug\GloblalLibrary.dll
+C:\Users\Laptop Home\source\repos\LogicLayerDataAccess\bin\Debug\GloblalLibrary.pdb

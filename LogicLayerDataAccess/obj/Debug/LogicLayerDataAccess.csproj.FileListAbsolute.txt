@@ -1,0 +1,6 @@
+C:\Users\Laptop Home\source\repos\LogicLayerDataAccess\bin\Debug\LogicLayerDataAccess.dll
+C:\Users\Laptop Home\source\repos\LogicLayerDataAccess\bin\Debug\LogicLayerDataAccess.pdb
+C:\Users\Laptop Home\source\repos\LogicLayerDataAccess\obj\Debug\LogicLayerDataAccess.csproj.AssemblyReference.cache
+C:\Users\Laptop Home\source\repos\LogicLayerDataAccess\obj\Debug\LogicLayerDataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Laptop Home\source\repos\LogicLayerDataAccess\obj\Debug\LogicLayerDataAccess.dll
+C:\Users\Laptop Home\source\repos\LogicLayerDataAccess\obj\Debug\LogicLayerDataAccess.pdb

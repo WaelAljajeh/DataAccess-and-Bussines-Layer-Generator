@@ -1,0 +1,6 @@
+C:\Users\Laptop Home\source\repos\GloblalLibrary\bin\Debug\GloblalLibrary.dll
+C:\Users\Laptop Home\source\repos\GloblalLibrary\bin\Debug\GloblalLibrary.pdb
+C:\Users\Laptop Home\source\repos\GloblalLibrary\obj\Debug\GloblalLibrary.csproj.AssemblyReference.cache
+C:\Users\Laptop Home\source\repos\GloblalLibrary\obj\Debug\GloblalLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Laptop Home\source\repos\GloblalLibrary\obj\Debug\GloblalLibrary.dll
+C:\Users\Laptop Home\source\repos\GloblalLibrary\obj\Debug\GloblalLibrary.pdb
