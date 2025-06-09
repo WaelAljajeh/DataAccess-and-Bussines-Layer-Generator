@@ -1,0 +1,28 @@
+ public static bool Get{TableName}By{PrimaryKeyID}({Type} {PrimaryKeyID} {ParameteList})
+ {
+     bool IsFound = false;
+     SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionstring);
+     string query = @"Select * from {TableName} where {PrimaryKeyID}=@{PrimaryKeyID}";
+     SqlCommand command = new SqlCommand(query, connection);
+     command.Parameters.AddWithValue("{PrimaryKeyID}", {PrimaryKeyID});
+
+     try
+     {
+         connection.Open();
+         SqlDataReader reader = command.ExecuteReader();
+         if (reader.Read())
+         {
+             IsFound = true;
+             
+
+         }
+         reader.Close();
+     }
+     catch (Exception ex)
+     {
+         Console.WriteLine("Error " + ex.ToString());
+     }
+     finally { connection.Close(); }
+     return IsFound ;
+
+ }

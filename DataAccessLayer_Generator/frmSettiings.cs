@@ -13,15 +13,49 @@ namespace DataAccessLayer_Generator
 {
     public partial class frmSettiings : Form
     {
+        string MethodsPath;
         DataTable _dtDataBases;
         public frmSettiings()
         {
             InitializeComponent();
         }
+        //void UnSubscribeToAllMethod()
+        //{
 
+        //    clsDataAccessGenerate.OnOperationExecuted -= clsDataAccessGenerate.GenerateInsertMethod;
+        //    clsDataAccessGenerate.OnOperationExecuted -= clsDataAccessGenerate.GenerateUpdateMethod;
+        //    clsDataAccessGenerate.OnOperationExecuted -= clsDataAccessGenerate.GenerateDeleteOperation;
+        //}
+        //void SubscribeToAllMethod()
+        //{
+            
+        //    clsDataAccessGenerate.OnOperationExecuted += clsDataAccessGenerate.GenerateInsertMethod;
+        //    clsDataAccessGenerate.OnOperationExecuted += clsDataAccessGenerate.GenerateUpdateMethod;
+        //    clsDataAccessGenerate.OnOperationExecuted += clsDataAccessGenerate.GenerateDeleteOperation;
+        //}
         private void guna2Button2_Click(object sender, EventArgs e)
         {
+            bool ChooseOperation = false;
+            if(MessageBox.Show("do you want to select your operation there are more features if you choose it manually","Info",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Information)==DialogResult.Yes)
+            {
+                ChooseOperation=true;
+            }
+            
+            foreach (var item in chkTableList.CheckedItems)
+            {
+                if (ChooseOperation)
+                {
+                    frmChooseOperations frmChooseOperations = new frmChooseOperations();
+                    frmChooseOperations.ShowDialog();
+                }
+                else
+                {
+                    //SubscribeToAllMethod();
+                }
+                clsDataAccessGenerate.GenerateMethodOperation(item.ToString());
 
+            }
+            clsDataAccessGenerate.GenerateDataAccessSetting();
         }
         void LoadDataBasesToComboBox()
         {
@@ -80,12 +114,12 @@ namespace DataAccessLayer_Generator
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            foreach (var item in chkTableList.CheckedItems)
-            {
-                ;
-                clsDataAccessGenerate.GenerateMethodOperation(item.ToString());
-            }
-            clsDataAccessGenerate.GenerateDataAccessSetting();
+            folderBrowserDialog1.ShowDialog();
+            if(!string.IsNullOrWhiteSpace(folderBrowserDialog1.SelectedPath))
+            MethodsPath=folderBrowserDialog1.SelectedPath;
+            clsDataAccessGenerate.MethodsPath= MethodsPath;
+            
+
         }
 
         private void chkSelectAll_CheckedChanged(object sender, EventArgs e)
@@ -94,6 +128,21 @@ namespace DataAccessLayer_Generator
             {
                chkTableList.SetItemChecked(i, chkSelectAll.Checked);
             }
+        }
+
+        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+           MethodsPath=saveFileDialog1.FileName;
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
+        {
+
         }
     }
 }

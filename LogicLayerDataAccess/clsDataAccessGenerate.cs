@@ -13,8 +13,13 @@ namespace LogicLayerDataAccess
 {
     public class clsDataAccessGenerate
     {
-       //static bool IsInInserting=false;
-      // static bool IsWithDataType = false;
+        
+        //public  delegate void OnOperationGenerator(clsTableLogic Table, clsColumn PrimaryKey, StringBuilder FileContent);
+        //public static OnOperationGenerator OnOperationExecuted;
+
+        //static bool IsInInserting=false;
+        // static bool IsWithDataType = false;
+        public static string MethodsPath;
       
        static string GenerateTheHeader(string DataBaseName)
         {
@@ -48,7 +53,7 @@ namespace LogicLayerDataAccess
         {
             string DataBaseName = clsSettings.DBName;
             string ConnectString=clsDataAccessSettings.ConnectionString;
-            File.WriteAllText($"C:/Users/Laptop Home/Desktop/Doucement/Code_Generator/clsDataAccessSettings.cs", GenerateTheHeader(DataBaseName)+ GenerateTheClassOfSettings(ConnectString));
+            File.WriteAllText($"{MethodsPath}/clsDataAccessSettings.cs", GenerateTheHeader(DataBaseName)+ GenerateTheClassOfSettings(ConnectString));
 
         }
         static string GetCommandValues(List<clsColumn> ColList)
@@ -64,7 +69,7 @@ namespace LogicLayerDataAccess
 
         }
         
-      static string GetParameterList(List<clsColumn>ColList,bool IsWithDataType=false,bool IsColValue=false, bool IsInInserting=false)
+      static string GetParameterList(List<clsColumn>ColList,bool IsWithDataType=false,bool IsColValue=false, bool IsInInserting=false,string prefix="")
         {
             List<string> parameters = new List<string>();
             
@@ -75,7 +80,7 @@ namespace LogicLayerDataAccess
                     continue;
 
                 if (IsWithDataType)
-                    parameters.Add($"{col.CSharpType} {col.Name}");
+                    parameters.Add($"{prefix} {col.CSharpType} {col.Name}");
                 else
                 {
                     if (IsColValue)
@@ -109,47 +114,77 @@ namespace LogicLayerDataAccess
         //    FileContent = FileContent + "\n}";
         //    File.WriteAllText("c.cs", Content+FileContent);
         //}
-        static void SetMethodFeature(ref string FileContent,clsTableLogic Table,clsColumn PrimaryKey,bool IsInserting)
+        static void SetMethodFeature(StringBuilder FileContent,clsTableLogic Table,clsColumn PrimaryKey,bool IsInserting,string prefix="")
         {
-            string Parmeters = GetParameterList(Table.ColumnsList, true, false, IsInserting);
-            FileContent = FileContent.Replace("{TableName}", Table.TableName);
-            FileContent = FileContent.Replace("{ParameteList}", Parmeters);
-            FileContent = FileContent.Replace("{Commands}", GetCommandValues(Table.ColumnsList));
+            StringBuilder Parmeters = new StringBuilder();
+            Parmeters.Append(GetParameterList(Table.ColumnsList, true, false, IsInserting,prefix));
+            FileContent.Replace("{TableName}", Table.TableName);
+            FileContent.Replace("{ParameteList}", Parmeters.ToString());
+            FileContent.Replace("{Commands}", GetCommandValues(Table.ColumnsList));
             if (PrimaryKey != null)
-                FileContent = FileContent.Replace("{PrimaryKeyID}", PrimaryKey?.Name ?? "");
+                FileContent.Replace("{PrimaryKeyID}", PrimaryKey?.Name ?? "");
             ;
         }
         
-        public static string GenerateInsertMethod(clsTableLogic Table, clsColumn PrimaryKey)
+        public static void GenerateInsertMethod(clsTableLogic Table, clsColumn PrimaryKey,StringBuilder Content)
         {
-           
-            string FileContent = File.ReadAllText("CRUD Operation\\AddOperation.txt");
-            SetMethodFeature(ref FileContent, Table, PrimaryKey,true); 
-            FileContent = FileContent.Replace("{Col}", GetParameterList(Table.ColumnsList, false, false, true));
-            FileContent = FileContent.Replace("{ColValue}", GetParameterList(Table.ColumnsList, false, true, true));
-            return FileContent;
+            string FileContentString= File.ReadAllText("CRUD Operation\\AddOperation.txt");
+            StringBuilder FileContent = new StringBuilder(FileContentString); 
+            SetMethodFeature( FileContent, Table, PrimaryKey,true); 
+            FileContent.Replace("{Col}", GetParameterList(Table.ColumnsList, false, false, true));
+            FileContent.Replace("{ColValue}", GetParameterList(Table.ColumnsList, false, true, true));
+            Content.Append(FileContent);
            
 
         }
-        public static string GenerateUpdateMethod(clsTableLogic Table, clsColumn PrimaryKey)
+        public static void GenerateUpdateMethod(clsTableLogic Table, clsColumn PrimaryKey,StringBuilder Content)
         {
-         string FileContent = File.ReadAllText("CRUD Operation\\UpdateOperation.txt");
-        SetMethodFeature(ref FileContent, Table, PrimaryKey,false);
-            FileContent = FileContent.Replace("{Col}", GetTheSetClauseInUpdateOperation(Table.ColumnsList));
-            return FileContent;
+           StringBuilder FileContent = new StringBuilder(File.ReadAllText("CRUD Operation\\UpdateOperation.txt")); 
+        SetMethodFeature( FileContent, Table, PrimaryKey,false);
+            FileContent.Replace("{Col}", GetTheSetClauseInUpdateOperation(Table.ColumnsList));
+            Content.Append(FileContent);
 
         }
         public static void GenerateMethodOperation(string TableName)
         {
-
+            StringBuilder Content = new StringBuilder();
             clsTableLogic Table = new clsTableLogic(TableName);
             //string Parmeters = GetParameterList(Table.ColumnsList, true, false);
-            string Content = GenerateTheHeader(clsSettings.DBName);
-            string MainClass = GenerateTheMainClass(TableName);
+            Content.Append(GenerateTheHeader(clsSettings.DBName));
+            Content.Append(GenerateTheMainClass(TableName));
             clsColumn PrimaryKey = Table.GetPrimaryKey();
-            string Methods=GenerateInsertMethod(Table, PrimaryKey)+GenerateUpdateMethod(Table,PrimaryKey);
-            File.WriteAllText($"C:/Users/Laptop Home/Desktop/Doucement/Code_Generator/cls{TableName}Data.cs", Content + MainClass+Methods+"\n}\n}");
+            StringBuilder Method=new StringBuilder();
+            GenerateInsertMethod(Table, PrimaryKey, Method);
+            GenerateUpdateMethod(Table, PrimaryKey, Method);
+            GenerateDeleteOperation(Table, PrimaryKey, Method);
+            GenerateGetByIDOperation(Table, PrimaryKey, Method);
+            //OnOperationExecuted(Table, PrimaryKey,Method);
+            Content.Append(Method);
+            //Content.Append(GenerateUpdateMethod(Table, PrimaryKey));
+            //Content.Append(GenerateDeleteOperation(Table,PrimaryKey));
+            File.WriteAllText($"{MethodsPath}/cls{TableName}Data.cs", Content +"\n}\n}");
 
+        }
+        public static void GenerateDeleteOperation(clsTableLogic Table,clsColumn PrimaryKey,StringBuilder Content)
+        {
+            if (PrimaryKey == null)
+                return ;
+            StringBuilder FileContent = new StringBuilder(File.ReadAllText("CRUD Operation\\DeleteOperation.txt"));
+            SetMethodFeature( FileContent, Table, PrimaryKey, false);
+            FileContent.Replace("{Type}", PrimaryKey.CSharpType);
+            Content.Append(FileContent);
+            
+             
+        }
+        public static void GenerateGetByIDOperation(clsTableLogic Table, clsColumn PrimaryKey, StringBuilder Content)
+        {
+            if (PrimaryKey == null)
+                return;
+            StringBuilder FileContent = new StringBuilder(File.ReadAllText("CRUD Operation\\GetByPrimaryKey.txt"));
+            SetMethodFeature(FileContent, Table, PrimaryKey, true,"ref");
+            FileContent.Replace("{Type}", PrimaryKey.CSharpType);
+            Content.Append(FileContent);
+            
         }
 
     }

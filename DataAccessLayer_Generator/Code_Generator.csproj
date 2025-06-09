@@ -106,6 +106,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GloblalLibrary\GloblalLibrary.csproj">
+      <Project>{cc3dfb08-78e8-4b4f-b996-599d15f5446c}</Project>
+      <Name>GloblalLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LogicLayerDataAccess\BussinesLayerForCodeGenerator.csproj">
       <Project>{f98a9976-cf19-4df2-a79c-13c6177eb4f8}</Project>
       <Name>BussinesLayerForCodeGenerator</Name>

@@ -1,0 +1,16 @@
+    public static bool Delete{TableName}({Type} {PrimaryKeyID})
+    {
+        int result = 0;
+        SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionstring);
+        string query = "Delete from {TableName} where {PrimaryKeyID}=@{PrimaryKeyID}";
+        SqlCommand command = new SqlCommand(query, connection);
+        command.Parameters.AddWithValue("{PrimaryKeyID}",{PrimaryKeyID});
+        try
+        {
+            connection.Open();
+            result = command.ExecuteNonQuery();
+        }
+        catch (Exception ex) { Console.WriteLine("Error " + ex.ToString()); }
+        finally { connection.Close(); }
+        return result > 0;
+    }

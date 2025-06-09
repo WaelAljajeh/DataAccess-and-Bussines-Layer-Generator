@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GloblalLibrary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace DataAccessLayer_Generator
         public frmChooseOperations()
         {
             InitializeComponent();
+        }
+
+        private void chkOperationList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
