@@ -48,7 +48,6 @@ namespace LogicLayerDataAccess
              "+@"{
               ";
         }
-
         public static void GenerateDataAccessSetting()
         {
             string DataBaseName = clsSettings.DBName;
@@ -69,13 +68,13 @@ namespace LogicLayerDataAccess
 
         }
         
-      static string GetParameterList(List<clsColumn>ColList,bool IsWithDataType=false,bool IsColValue=false, bool IsInInserting=false,string prefix="")
+      static string GetParameterList(List<clsColumn>ColList,bool IsWithDataType=false,bool IsColValue=false, bool IncludePrimaryKey = false,string prefix="")
         {
             List<string> parameters = new List<string>();
             
             foreach (clsColumn col in ColList)
             {
-                if(IsInInserting)
+                if(IncludePrimaryKey)
                 if (col.IsPrimaryKey)
                     continue;
 
@@ -114,10 +113,10 @@ namespace LogicLayerDataAccess
         //    FileContent = FileContent + "\n}";
         //    File.WriteAllText("c.cs", Content+FileContent);
         //}
-        static void SetMethodFeature(StringBuilder FileContent,clsTableLogic Table,clsColumn PrimaryKey,bool IsInserting,string prefix="")
+        static void SetCommonCrudTemplateValues(StringBuilder FileContent,clsTableLogic Table,clsColumn PrimaryKey,bool IncludePrimaryKey,string prefix="")
         {
             StringBuilder Parmeters = new StringBuilder();
-            Parmeters.Append(GetParameterList(Table.ColumnsList, true, false, IsInserting,prefix));
+            Parmeters.Append(GetParameterList(Table.ColumnsList, true, false, IncludePrimaryKey, prefix));
             FileContent.Replace("{TableName}", Table.TableName);
             FileContent.Replace("{ParameteList}", Parmeters.ToString());
             FileContent.Replace("{Commands}", GetCommandValues(Table.ColumnsList));
@@ -130,7 +129,7 @@ namespace LogicLayerDataAccess
         {
             string FileContentString= File.ReadAllText("CRUD Operation\\AddOperation.txt");
             StringBuilder FileContent = new StringBuilder(FileContentString); 
-            SetMethodFeature( FileContent, Table, PrimaryKey,true); 
+            SetCommonCrudTemplateValues( FileContent, Table, PrimaryKey,true); 
             FileContent.Replace("{Col}", GetParameterList(Table.ColumnsList, false, false, true));
             FileContent.Replace("{ColValue}", GetParameterList(Table.ColumnsList, false, true, true));
             Content.Append(FileContent);
@@ -139,8 +138,8 @@ namespace LogicLayerDataAccess
         }
         public static void GenerateUpdateMethod(clsTableLogic Table, clsColumn PrimaryKey,StringBuilder Content)
         {
-           StringBuilder FileContent = new StringBuilder(File.ReadAllText("CRUD Operation\\UpdateOperation.txt")); 
-        SetMethodFeature( FileContent, Table, PrimaryKey,false);
+           StringBuilder FileContent = new StringBuilder(File.ReadAllText("CRUD Operation\\UpdateOperation.txt"));
+            SetCommonCrudTemplateValues( FileContent, Table, PrimaryKey,false);
             FileContent.Replace("{Col}", GetTheSetClauseInUpdateOperation(Table.ColumnsList));
             Content.Append(FileContent);
 
@@ -170,18 +169,24 @@ namespace LogicLayerDataAccess
             if (PrimaryKey == null)
                 return ;
             StringBuilder FileContent = new StringBuilder(File.ReadAllText("CRUD Operation\\DeleteOperation.txt"));
-            SetMethodFeature( FileContent, Table, PrimaryKey, false);
+            SetCommonCrudTemplateValues( FileContent, Table, PrimaryKey, false);
             FileContent.Replace("{Type}", PrimaryKey.CSharpType);
             Content.Append(FileContent);
             
              
+        }
+       static string GetObjectConverted(List<clsColumn> ColList)
+        {
+            return string.Join(Environment.NewLine, ColList.Where(c => !c.IsPrimaryKey)
+            .Select(c => $"{("{Value}= "+clsUtil.ConvertObjectToDataType(c)).Replace("{Value}",c.Name)};"));
         }
         public static void GenerateGetByIDOperation(clsTableLogic Table, clsColumn PrimaryKey, StringBuilder Content)
         {
             if (PrimaryKey == null)
                 return;
             StringBuilder FileContent = new StringBuilder(File.ReadAllText("CRUD Operation\\GetByPrimaryKey.txt"));
-            SetMethodFeature(FileContent, Table, PrimaryKey, true,"ref");
+            SetCommonCrudTemplateValues(FileContent, Table, PrimaryKey, true,"ref");
+            FileContent.Replace(" {ConvertObjectToValues}",GetObjectConverted(Table.ColumnsList));
             FileContent.Replace("{Type}", PrimaryKey.CSharpType);
             Content.Append(FileContent);
             
