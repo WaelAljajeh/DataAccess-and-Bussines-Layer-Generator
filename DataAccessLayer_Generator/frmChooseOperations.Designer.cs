@@ -37,8 +37,10 @@
             this.chkGetColList.FormattingEnabled = true;
             this.chkGetColList.Location = new System.Drawing.Point(102, 75);
             this.chkGetColList.Name = "chkGetColList";
-            this.chkGetColList.Size = new System.Drawing.Size(150, 42);
+            this.chkGetColList.Size = new System.Drawing.Size(202, 42);
             this.chkGetColList.TabIndex = 1;
+            this.chkGetColList.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.chkGetColList_ItemCheck);
+            this.chkGetColList.SelectedIndexChanged += new System.EventHandler(this.chkGetColList_SelectedIndexChanged);
             // 
             // chkOperationList
             // 
@@ -52,6 +54,7 @@
             this.chkOperationList.Name = "chkOperationList";
             this.chkOperationList.Size = new System.Drawing.Size(392, 308);
             this.chkOperationList.TabIndex = 0;
+            this.chkOperationList.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.chkOperationList_ItemCheck);
             this.chkOperationList.SelectedIndexChanged += new System.EventHandler(this.chkOperationList_SelectedIndexChanged);
             // 
             // frmChooseOperations
@@ -63,6 +66,7 @@
             this.Controls.Add(this.chkOperationList);
             this.Name = "frmChooseOperations";
             this.Text = "frmChooseOperations";
+            this.Load += new System.EventHandler(this.frmChooseOperations_Load);
             this.ResumeLayout(false);
 
         }

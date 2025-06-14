@@ -3,32 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{18D0D003-AD93-4C5A-9B05-E17197EC1ACA}|Code_Generator.csproj|C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmsettiings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{18D0D003-AD93-4C5A-9B05-E17197EC1ACA}|Code_Generator.csproj|solutionrelative:frmsettiings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F98A9976-CF19-4DF2-A79C-13C6177EB4F8}|..\\LogicLayerDataAccess\\BussinesLayerForCodeGenerator.csproj|c:\\users\\laptop home\\desktop\\doucement\\data access and bussines generator\\logiclayerdataaccess\\clsdataaccessgenerate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Laptop Home\\Documents\\ContactData\\clsContactsData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F98A9976-CF19-4DF2-A79C-13C6177EB4F8}|..\\LogicLayerDataAccess\\BussinesLayerForCodeGenerator.csproj|c:\\users\\laptop home\\desktop\\doucement\\data access and bussines generator\\logiclayerdataaccess\\clsglobal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F98A9976-CF19-4DF2-A79C-13C6177EB4F8}|..\\LogicLayerDataAccess\\BussinesLayerForCodeGenerator.csproj|c:\\users\\laptop home\\desktop\\doucement\\data access and bussines generator\\logiclayerdataaccess\\clscrudtemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F98A9976-CF19-4DF2-A79C-13C6177EB4F8}|..\\LogicLayerDataAccess\\BussinesLayerForCodeGenerator.csproj|c:\\users\\laptop home\\desktop\\doucement\\data access and bussines generator\\logiclayerdataaccess\\clscolumnroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{18D0D003-AD93-4C5A-9B05-E17197EC1ACA}|Code_Generator.csproj|C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmchooseoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{18D0D003-AD93-4C5A-9B05-E17197EC1ACA}|Code_Generator.csproj|solutionrelative:frmchooseoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Laptop Home\\source\\repos\\LogicLayerDataAccess\\clsTableLogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{18D0D003-AD93-4C5A-9B05-E17197EC1ACA}|Code_Generator.csproj|C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmchooseoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{18D0D003-AD93-4C5A-9B05-E17197EC1ACA}|Code_Generator.csproj|solutionrelative:frmchooseoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{18D0D003-AD93-4C5A-9B05-E17197EC1ACA}|Code_Generator.csproj|C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmsettiings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{18D0D003-AD93-4C5A-9B05-E17197EC1ACA}|Code_Generator.csproj|solutionrelative:frmsettiings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Laptop Home\\source\\repos\\DataAccessLayerForCodeGenerator\\clsTablesData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{18D0D003-AD93-4C5A-9B05-E17197EC1ACA}|Code_Generator.csproj|C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmsettiings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18D0D003-AD93-4C5A-9B05-E17197EC1ACA}|Code_Generator.csproj|solutionrelative:frmsettiings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Laptop Home\\source\\repos\\GloblalLibrary\\clsColumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -36,6 +28,29 @@
     {
       "AbsoluteMoniker": "D:0:0:{18D0D003-AD93-4C5A-9B05-E17197EC1ACA}|Code_Generator.csproj|C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{18D0D003-AD93-4C5A-9B05-E17197EC1ACA}|Code_Generator.csproj|solutionrelative:frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18D0D003-AD93-4C5A-9B05-E17197EC1ACA}|Code_Generator.csproj|C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmsettiings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{18D0D003-AD93-4C5A-9B05-E17197EC1ACA}|Code_Generator.csproj|solutionrelative:frmsettiings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3DFB08-78E8-4B4F-B996-599D15F5446C}|..\\GloblalLibrary\\GloblalLibrary.csproj|c:\\users\\laptop home\\desktop\\doucement\\data access and bussines generator\\globlallibrary\\clscolumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18D0D003-AD93-4C5A-9B05-E17197EC1ACA}|Code_Generator.csproj|C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmchooseoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{18D0D003-AD93-4C5A-9B05-E17197EC1ACA}|Code_Generator.csproj|solutionrelative:frmchooseoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Laptop Home\\source\\repos\\LogicLayerDataAccess\\clsTableLogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3DFB08-78E8-4B4F-B996-599D15F5446C}|..\\GloblalLibrary\\GloblalLibrary.csproj|c:\\users\\laptop home\\desktop\\doucement\\data access and bussines generator\\globlallibrary\\clsutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95E3D704-4806-4DF9-88CE-081DE8EBBEEA}|..\\DataAccessLayerForCodeGenerator\\DataAccessLayerForCodeGenerator.csproj|c:\\users\\laptop home\\desktop\\doucement\\data access and bussines generator\\dataaccesslayerforcodegenerator\\clscolumndata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Laptop Home\\source\\repos\\DataAccessLayerForCodeGenerator\\clsTablesData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Laptop Home\\source\\repos\\DataAccessLayerForCodeGenerator\\clsDataAccessSettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -85,89 +100,115 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "clsGlobal.cs",
+              "DocumentMoniker": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\LogicLayerDataAccess\\clsGlobal.cs",
+              "RelativeDocumentMoniker": "..\\LogicLayerDataAccess\\clsGlobal.cs",
+              "ToolTip": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\LogicLayerDataAccess\\clsGlobal.cs",
+              "RelativeToolTip": "..\\LogicLayerDataAccess\\clsGlobal.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAADwv0UAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T11:29:48.587Z"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "clsContactsData.cs",
-              "DocumentMoniker": "C:\\Users\\Laptop Home\\Documents\\ContactData\\clsContactsData.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\Documents\\ContactData\\clsContactsData.cs",
-              "ToolTip": "C:\\Users\\Laptop Home\\Documents\\ContactData\\clsContactsData.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\Documents\\ContactData\\clsContactsData.cs",
-              "ViewState": "AgIAAFsAAAAANDMzMzMLwAAAAAAAAAAAAAAAAA==",
+              "Title": "clsCrudTemplate.cs",
+              "DocumentMoniker": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\LogicLayerDataAccess\\clsCrudTemplate.cs",
+              "RelativeDocumentMoniker": "..\\LogicLayerDataAccess\\clsCrudTemplate.cs",
+              "ToolTip": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\LogicLayerDataAccess\\clsCrudTemplate.cs",
+              "RelativeToolTip": "..\\LogicLayerDataAccess\\clsCrudTemplate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T21:59:35.099Z"
+              "WhenOpened": "2025-06-13T11:18:07.327Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "clsColumnRoles.cs",
+              "DocumentMoniker": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\LogicLayerDataAccess\\clsColumnRoles.cs",
+              "RelativeDocumentMoniker": "..\\LogicLayerDataAccess\\clsColumnRoles.cs",
+              "ToolTip": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\LogicLayerDataAccess\\clsColumnRoles.cs",
+              "RelativeToolTip": "..\\LogicLayerDataAccess\\clsColumnRoles.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T17:28:23.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "frmChooseOperations.cs",
               "DocumentMoniker": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmChooseOperations.cs",
               "RelativeDocumentMoniker": "frmChooseOperations.cs",
               "ToolTip": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmChooseOperations.cs",
               "RelativeToolTip": "frmChooseOperations.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAvwBYAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAABQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-08T20:46:41.879Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "clsDataAccessGenerate.cs",
               "DocumentMoniker": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\LogicLayerDataAccess\\clsDataAccessGenerate.cs",
               "RelativeDocumentMoniker": "..\\LogicLayerDataAccess\\clsDataAccessGenerate.cs",
               "ToolTip": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\LogicLayerDataAccess\\clsDataAccessGenerate.cs",
               "RelativeToolTip": "..\\LogicLayerDataAccess\\clsDataAccessGenerate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAABAZmZmZmYwwGQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-07T09:49:26.13Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "frmSettiings.cs",
               "DocumentMoniker": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmSettiings.cs",
               "RelativeDocumentMoniker": "frmSettiings.cs",
               "ToolTip": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmSettiings.cs",
               "RelativeToolTip": "frmSettiings.cs",
-              "ViewState": "AgIAAEYAAADAZWZmZmYswBsAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAYwDYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T09:39:20.857Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T09:39:20.857Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "clsTableLogic.cs",
               "DocumentMoniker": "C:\\Users\\Laptop Home\\source\\repos\\LogicLayerDataAccess\\clsTableLogic.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\LogicLayerDataAccess\\clsTableLogic.cs",
               "ToolTip": "C:\\Users\\Laptop Home\\source\\repos\\LogicLayerDataAccess\\clsTableLogic.cs",
               "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\LogicLayerDataAccess\\clsTableLogic.cs",
-              "ViewState": "AgIAAAkAAABgZmZmZmYkwA0AAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-04T16:20:06.852Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "frmSettiings.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmSettiings.cs",
               "RelativeDocumentMoniker": "frmSettiings.cs",
               "ToolTip": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmSettiings.cs [Design]",
               "RelativeToolTip": "frmSettiings.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:44:46.076Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-04T19:44:46.076Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "frmLogin.cs",
               "DocumentMoniker": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmLogin.cs",
               "RelativeDocumentMoniker": "frmLogin.cs",
@@ -179,19 +220,66 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "clsColumn.cs",
               "DocumentMoniker": "C:\\Users\\Laptop Home\\source\\repos\\GloblalLibrary\\clsColumn.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\GloblalLibrary\\clsColumn.cs",
               "ToolTip": "C:\\Users\\Laptop Home\\source\\repos\\GloblalLibrary\\clsColumn.cs",
               "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\GloblalLibrary\\clsColumn.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-05T16:25:12.852Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
+              "Title": "frmChooseOperations.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmChooseOperations.cs",
+              "RelativeDocumentMoniker": "frmChooseOperations.cs",
+              "ToolTip": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmChooseOperations.cs [Design]",
+              "RelativeToolTip": "frmChooseOperations.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T21:02:20.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "clsColumn.cs",
+              "DocumentMoniker": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\GloblalLibrary\\clsColumn.cs",
+              "RelativeDocumentMoniker": "..\\GloblalLibrary\\clsColumn.cs",
+              "ToolTip": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\GloblalLibrary\\clsColumn.cs",
+              "RelativeToolTip": "..\\GloblalLibrary\\clsColumn.cs",
+              "ViewState": "AgIAAAcAAAAAzczMzMwowBEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T21:55:14.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "clsColumnData.cs",
+              "DocumentMoniker": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayerForCodeGenerator\\clsColumnData.cs",
+              "RelativeDocumentMoniker": "..\\DataAccessLayerForCodeGenerator\\clsColumnData.cs",
+              "ToolTip": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayerForCodeGenerator\\clsColumnData.cs",
+              "RelativeToolTip": "..\\DataAccessLayerForCodeGenerator\\clsColumnData.cs",
+              "ViewState": "AgIAACYAAAAAmZmZmZkdwBMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T13:14:25.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "clsUtil.cs",
+              "DocumentMoniker": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\GloblalLibrary\\clsUtil.cs",
+              "RelativeDocumentMoniker": "..\\GloblalLibrary\\clsUtil.cs",
+              "ToolTip": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\GloblalLibrary\\clsUtil.cs",
+              "RelativeToolTip": "..\\GloblalLibrary\\clsUtil.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAQwD8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T13:23:51.378Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "clsTablesData.cs",
               "DocumentMoniker": "C:\\Users\\Laptop Home\\source\\repos\\DataAccessLayerForCodeGenerator\\clsTablesData.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\DataAccessLayerForCodeGenerator\\clsTablesData.cs",
@@ -203,18 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmChooseOperations.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmChooseOperations.cs",
-              "RelativeDocumentMoniker": "frmChooseOperations.cs",
-              "ToolTip": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmChooseOperations.cs [Design]",
-              "RelativeToolTip": "frmChooseOperations.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T21:02:20.629Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "clsDataAccessSettings.cs",
               "DocumentMoniker": "C:\\Users\\Laptop Home\\source\\repos\\DataAccessLayerForCodeGenerator\\clsDataAccessSettings.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\DataAccessLayerForCodeGenerator\\clsDataAccessSettings.cs",
@@ -226,7 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
               "Title": "clsDataBasesLogic.cs",
               "DocumentMoniker": "C:\\Users\\Laptop Home\\source\\repos\\LogicLayerDataAccess\\clsDataBasesLogic.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\LogicLayerDataAccess\\clsDataBasesLogic.cs",
@@ -238,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 24,
               "Title": "clsDataBases.cs",
               "DocumentMoniker": "C:\\Users\\Laptop Home\\source\\repos\\DataAccessLayerForCodeGenerator\\clsDataBases.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\DataAccessLayerForCodeGenerator\\clsDataBases.cs",
@@ -250,7 +327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "frmLogin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmLogin.cs",
               "RelativeDocumentMoniker": "frmLogin.cs",
@@ -261,7 +338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 22,
               "Title": "frmLogin.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmLogin.Designer.cs",
               "RelativeDocumentMoniker": "frmLogin.Designer.cs",
@@ -273,7 +350,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "frmLogin.cs",
               "DocumentMoniker": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmLogin.cs",
               "RelativeDocumentMoniker": "frmLogin.cs",
@@ -285,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "frmLogin.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmLogin.Designer.cs",
               "RelativeDocumentMoniker": "frmLogin.Designer.cs",
@@ -297,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "frmSettiings.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmSettiings.cs",
               "RelativeDocumentMoniker": "frmSettiings.cs",
@@ -308,7 +385,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -320,7 +397,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "frmLogin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Laptop Home\\Desktop\\Doucement\\Data Access and Bussines Generator\\DataAccessLayer_Generator\\frmLogin.cs",
               "RelativeDocumentMoniker": "frmLogin.cs",
@@ -331,7 +408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 25,
               "Title": "clsSettings.cs",
               "DocumentMoniker": "C:\\Users\\Laptop Home\\source\\repos\\LogicLayerDataAccess\\clsSettings.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\LogicLayerDataAccess\\clsSettings.cs",

@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
 
 namespace DataAccessLayer_Generator
@@ -43,16 +44,21 @@ namespace DataAccessLayer_Generator
             
             foreach (var item in chkTableList.CheckedItems)
             {
+                clsTableLogic Table = new clsTableLogic(item.ToString());
                 if (ChooseOperation)
-                {
-                    frmChooseOperations frmChooseOperations = new frmChooseOperations();
+                {   
+                    frmChooseOperations frmChooseOperations = new frmChooseOperations(Table);
                     frmChooseOperations.ShowDialog();
                 }
                 else
                 {
+                    var pk = Table.GetPrimaryKey();
+                    if(pk!=null)
+                    pk.IsGetByEnabled = true;
                     //SubscribeToAllMethod();
                 }
-                clsDataAccessGenerate.GenerateMethodOperation(item.ToString());
+                clsDataAccessGenerate.GenerateMethodOperation(Table);
+                //clsDataAccessGenerate.OnOperationExecuted = null;
 
             }
             clsDataAccessGenerate.GenerateDataAccessSetting();
@@ -94,20 +100,8 @@ namespace DataAccessLayer_Generator
         private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             chkTableList.Items.Clear();
-            //dgvTables.Columns.Clear();
             clsSettings.DBName =guna2ComboBox1.Text;
             clsSettings.SetConnectionString();
-            //DataGridViewCheckBoxColumn chkColumn = new DataGridViewCheckBoxColumn
-            //{
-            //    Name = "chkSelect",
-            //    HeaderText = "Select",
-            //    DataPropertyName = "IsSelected",  // Binds to TableModel.IsSelected
-            //    Width = 60,
-            //    FlatStyle = FlatStyle.Standard
-            //};
-            //dgvTables.Columns.Add(chkColumn);
-            //dgvTables.Visible= true;
-            //dgvTables.DataSource = clsTableLogic.GetAllTheTables();
             AddTablesToListBox();
 
         }

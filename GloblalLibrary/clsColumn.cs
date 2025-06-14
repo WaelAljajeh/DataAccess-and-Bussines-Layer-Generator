@@ -15,6 +15,8 @@ namespace GloblalLibrary
         public int OrdinalPosition { get; set; }
         public string CSharpType {  get; set; }
 
+        public bool IsGetByEnabled { get; set; }
+
         public clsColumn(string name, string dataType, bool isPrimaryKey = false, bool isNullable = true, int ordinalPosition = 0, string cSharpType = null)
         {
             Name = name;
@@ -23,6 +25,7 @@ namespace GloblalLibrary
             IsNullable = isNullable;
             OrdinalPosition = ordinalPosition;
             CSharpType = cSharpType;
+            IsGetByEnabled = false;
         }
     }
 }

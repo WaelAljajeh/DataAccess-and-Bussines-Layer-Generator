@@ -4,3 +4,9 @@ C:\Users\Laptop Home\source\repos\GloblalLibrary\obj\Debug\GloblalLibrary.csproj
 C:\Users\Laptop Home\source\repos\GloblalLibrary\obj\Debug\GloblalLibrary.csproj.CoreCompileInputs.cache
 C:\Users\Laptop Home\source\repos\GloblalLibrary\obj\Debug\GloblalLibrary.dll
 C:\Users\Laptop Home\source\repos\GloblalLibrary\obj\Debug\GloblalLibrary.pdb
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\GloblalLibrary\bin\Debug\GloblalLibrary.dll
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\GloblalLibrary\bin\Debug\GloblalLibrary.pdb
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\GloblalLibrary\obj\Debug\GloblalLibrary.csproj.AssemblyReference.cache
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\GloblalLibrary\obj\Debug\GloblalLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\GloblalLibrary\obj\Debug\GloblalLibrary.dll
+C:\Users\Laptop Home\Desktop\Doucement\Data Access and Bussines Generator\GloblalLibrary\obj\Debug\GloblalLibrary.pdb

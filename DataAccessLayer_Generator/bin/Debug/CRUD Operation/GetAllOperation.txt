@@ -1,0 +1,29 @@
+  public static DataTable GetAll{TableName}Info()
+  {
+      DataTable result=new DataTable();
+      SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionstring);
+      string query = @"Select * from {TableName}";
+      SqlCommand command = new SqlCommand(query, connection);
+      
+
+      try
+      {
+          connection.Open();
+          SqlDataReader reader = command.ExecuteReader();
+          if (reader.HasRows)
+          {
+              result.Load(reader);
+
+
+
+
+          }
+          reader.Close();
+      }
+      catch (Exception ex)
+      {
+          Console.WriteLine("Error " + ex.ToString());
+      }
+      finally { connection.Close(); }
+      return result;
+  }
