@@ -38,6 +38,8 @@
             this.chkSelectAll = new System.Windows.Forms.CheckBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.dgvColumns = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvColumns)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2ComboBox1
@@ -52,9 +54,9 @@
             this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(155, 76);
+            this.guna2ComboBox1.Location = new System.Drawing.Point(394, 32);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(323, 36);
+            this.guna2ComboBox1.Size = new System.Drawing.Size(725, 36);
             this.guna2ComboBox1.TabIndex = 0;
             this.guna2ComboBox1.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
             // 
@@ -75,7 +77,7 @@
             this.guna2Button1.FillColor = System.Drawing.Color.Black;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(12, 393);
+            this.guna2Button1.Location = new System.Drawing.Point(-4, 631);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(223, 45);
             this.guna2Button1.TabIndex = 1;
@@ -94,7 +96,7 @@
             this.guna2Button2.FillColor = System.Drawing.Color.Black;
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(351, 393);
+            this.guna2Button2.Location = new System.Drawing.Point(1277, 631);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(223, 45);
             this.guna2Button2.TabIndex = 2;
@@ -104,15 +106,16 @@
             // chkTableList
             // 
             this.chkTableList.FormattingEnabled = true;
-            this.chkTableList.Location = new System.Drawing.Point(155, 173);
+            this.chkTableList.Location = new System.Drawing.Point(394, 129);
             this.chkTableList.Name = "chkTableList";
-            this.chkTableList.Size = new System.Drawing.Size(323, 137);
+            this.chkTableList.Size = new System.Drawing.Size(725, 137);
             this.chkTableList.TabIndex = 4;
+            this.chkTableList.SelectedIndexChanged += new System.EventHandler(this.chkTableList_SelectedIndexChanged);
             // 
             // chkSelectAll
             // 
             this.chkSelectAll.AutoSize = true;
-            this.chkSelectAll.Location = new System.Drawing.Point(155, 134);
+            this.chkSelectAll.Location = new System.Drawing.Point(394, 90);
             this.chkSelectAll.Name = "chkSelectAll";
             this.chkSelectAll.Size = new System.Drawing.Size(82, 21);
             this.chkSelectAll.TabIndex = 5;
@@ -128,11 +131,22 @@
             // 
             this.folderBrowserDialog1.HelpRequest += new System.EventHandler(this.folderBrowserDialog1_HelpRequest);
             // 
+            // dgvColumns
+            // 
+            this.dgvColumns.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvColumns.Location = new System.Drawing.Point(195, 308);
+            this.dgvColumns.Name = "dgvColumns";
+            this.dgvColumns.RowHeadersWidth = 51;
+            this.dgvColumns.RowTemplate.Height = 26;
+            this.dgvColumns.Size = new System.Drawing.Size(1086, 301);
+            this.dgvColumns.TabIndex = 6;
+            // 
             // frmSettiings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 450);
+            this.ClientSize = new System.Drawing.Size(1512, 688);
+            this.Controls.Add(this.dgvColumns);
             this.Controls.Add(this.chkSelectAll);
             this.Controls.Add(this.chkTableList);
             this.Controls.Add(this.guna2Button2);
@@ -142,6 +156,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Settings";
             this.Load += new System.EventHandler(this.frmSettiings_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvColumns)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,5 +173,6 @@
         private System.Windows.Forms.CheckBox chkSelectAll;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.DataGridView dgvColumns;
     }
 }

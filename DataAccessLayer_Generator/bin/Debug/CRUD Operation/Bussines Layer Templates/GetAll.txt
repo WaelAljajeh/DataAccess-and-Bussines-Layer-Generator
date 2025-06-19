@@ -1,0 +1,4 @@
+    public static DataTable GetAll{TableName}()
+    {
+        return cls{TableName}Data.GetAll{TableName}();
+    }

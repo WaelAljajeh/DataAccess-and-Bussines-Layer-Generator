@@ -1,0 +1,16 @@
+ public bool Save()
+    {
+        switch (_Mode)
+        {
+            case enMode.Add:
+                if (AddNew{TableName}())
+                {
+                    _Mode = enMode.Update;
+                    return true;
+                }
+                return false;
+            case enMode.Update:
+                return Update{TableName}();
+        }
+        return false;
+    }

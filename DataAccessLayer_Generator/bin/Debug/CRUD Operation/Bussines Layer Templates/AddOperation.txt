@@ -1,0 +1,5 @@
+  private bool AddNew{TableName}()
+  {
+        {PrimaryKeyID} = cls{TableName}Data.AddNew{TableName}({ParameteList});
+        return {PrimaryKeyID} != -1;
+  }

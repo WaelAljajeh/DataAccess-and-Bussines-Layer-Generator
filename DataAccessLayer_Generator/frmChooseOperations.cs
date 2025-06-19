@@ -16,13 +16,16 @@ namespace DataAccessLayer_Generator
     public partial class frmChooseOperations : Form
     {
         clsTableLogic _Table;
-        public frmChooseOperations(clsTableLogic Table)
+        List<clsCustomGetBy> CustomMethodTypeList;
+        public frmChooseOperations(clsTableLogic Table,List<clsCustomGetBy> customMethodTypeList)
         {
             InitializeComponent();
             _Table = Table;
+            CustomMethodTypeList = customMethodTypeList;
         }
-        enum enOperation { Add,Delete,Update,GetBy};
-
+        enum enOperation { Add,DeleteBy,Update,GetBy};
+        clsCustomGetBy CustomMethodType;
+        
         private void chkOperationList_SelectedIndexChanged(object sender, EventArgs e)
         {
             
@@ -30,6 +33,7 @@ namespace DataAccessLayer_Generator
 
         private void frmChooseOperations_Load(object sender, EventArgs e)
         {
+            
             foreach (var col in _Table.ColumnsList)
             { 
                 
@@ -46,48 +50,71 @@ namespace DataAccessLayer_Generator
         private void chkGetColList_ItemCheck(object sender, ItemCheckEventArgs e)
         {
             
+          
+            
+            
+            
+        }
+        void AddCheckedColumnsToList()
+        {
             foreach (clsColumn col in _Table.ColumnsList)
             {
-                
-                col.IsGetByEnabled = false;
+
+               
                 foreach (var item in chkGetColList.CheckedItems)
                 {
 
 
                     if (col.Name == item.ToString())
                     {
-                        col.IsGetByEnabled = true;
+                        CustomMethodType.GetByCols.Add(col);
                         break;
                     }
                 }
             }
-            
-            
-            
         }
-
         private void chkOperationList_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            //foreach(var item in chkOperationList.CheckedItems)
-            //{
-            //    if (item.ToString() == enOperation.Add.ToString())
-            //    {
-            //        clsDataAccessGenerate.OnOperationExecuted += clsDataAccessGenerate.GenerateInsertMethod;
-            //    }
-            //    else if (item.ToString() == enOperation.Update.ToString())
-            //    {
-            //        clsDataAccessGenerate.OnOperationExecuted += clsDataAccessGenerate.GenerateUpdateMethod;
-            //    }
-            //    else if(item.ToString()==enOperation.Delete.ToString())
-            //    {
-            //        clsDataAccessGenerate.OnOperationExecuted += clsDataAccessGenerate.GenerateDeleteOperation;
-            //    }
-            //    else
-            //    {
-            //        clsDataAccessGenerate.OnOperationExecuted += clsDataAccessGenerate.GenerateGetByIDOperation;
-            //    }
+        
+        }
 
-            //}
+        private void llAddCustomMethod_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+            CustomMethodType = new clsCustomGetBy();
+            cbMethodType.Visible = true;
+            cbMethodType.SelectedIndex = 0;
+            chkGetColList.Visible = true;
+            btnAddCustomMethod.Visible = true;
+
+        }
+
+        private void cbMethodType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbMethodType.SelectedIndex==cbMethodType.FindString(clsCustomGetBy.enMethods.GetBy.ToString()))
+            {
+                CustomMethodType.MethodType = clsCustomGetBy.enMethods.GetBy;
+            }
+            else if(cbMethodType.SelectedIndex == cbMethodType.FindString(clsCustomGetBy.enMethods.DeleteBy.ToString()))
+            {
+                CustomMethodType.MethodType = clsCustomGetBy.enMethods.DeleteBy;
+            }
+            else
+            {
+                CustomMethodType.MethodType = clsCustomGetBy.enMethods.IsExistingBy;
+            }
+        }
+
+        private void btnAddCustomMethod_Click(object sender, EventArgs e)
+        {
+            AddCheckedColumnsToList();
+            CustomMethodTypeList.Add(CustomMethodType);
+            cbMethodType.Visible = false;
+            //cbMethodType.SelectedIndex = 0;
+            chkGetColList.Visible = false;
+            btnAddCustomMethod.Visible = false;
+
+
         }
     }
 }

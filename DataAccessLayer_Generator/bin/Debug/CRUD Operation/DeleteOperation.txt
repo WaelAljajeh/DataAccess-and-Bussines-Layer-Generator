@@ -1,10 +1,10 @@
-    public static bool Delete{TableName}({Type} {PrimaryKeyID})
+    public static bool Delete{TableName}By{ColumnNames}({InputParameters})
     {
         int result = 0;
         SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionstring);
-        string query = "Delete from {TableName} where {PrimaryKeyID}=@{PrimaryKeyID}";
+        string query = "Delete from {TableName} where {WhereClause}";
         SqlCommand command = new SqlCommand(query, connection);
-        command.Parameters.AddWithValue("{PrimaryKeyID}",{PrimaryKeyID});
+        {Commands}
         try
         {
             connection.Open();

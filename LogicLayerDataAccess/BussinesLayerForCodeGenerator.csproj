@@ -41,13 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsBussinessLayer_Generator.cs" />
     <Compile Include="clsColumnRoles.cs" />
     <Compile Include="clsCrudTemplate.cs" />
+    <Compile Include="clsCustomGetBy.cs" />
     <Compile Include="clsDataAccessGenerate.cs" />
     <Compile Include="clsDataBasesLogic.cs" />
+    <Compile Include="clsGenerateMethod.cs" />
+    <Compile Include="clsGetByMethod.cs" />
     <Compile Include="clsGlobal.cs" />
+    <Compile Include="clsInsertMethod.cs" />
+    <Compile Include="clsLogicLayerConstructorAndProprietes.cs" />
+    <Compile Include="clsSaveMethodforLogicLayer.cs" />
     <Compile Include="clsSettings.cs" />
     <Compile Include="clsTableLogic.cs" />
+    <Compile Include="clsUpdateMethod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,15 @@
+
+      enum enMode {Add=0,Update=1}
+      enMode _Mode;
+      {Proprites}
+
+     public cls{TableName}() 
+     {
+          _Mode = enMode.Add;
+          {DefaultConstructorValue}
+     }
+     private cls{TableName}({ParameterList})
+      {
+          _Mode = enMode.Update;
+          {ParameterizedAssignments}
+      }

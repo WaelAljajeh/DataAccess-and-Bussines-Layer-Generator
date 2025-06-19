@@ -5,10 +5,10 @@
           string query = @"INSERT INTO {TableName}
          ({Col})
    VALUES
-         ({ColValue})
+         ({@Col})
         select SCOPE_IDENTITY();";
           SqlCommand command= new SqlCommand(query, connection);
-          {Commands}
+          {Commands};
           try
           {
               connection.Open();

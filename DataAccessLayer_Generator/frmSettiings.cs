@@ -16,24 +16,12 @@ namespace DataAccessLayer_Generator
     {
         string MethodsPath;
         DataTable _dtDataBases;
+        List<clsTableLogic> Tables;
+        List<clsCustomGetBy> CustomMethod = new List<clsCustomGetBy> { };
         public frmSettiings()
         {
             InitializeComponent();
         }
-        //void UnSubscribeToAllMethod()
-        //{
-
-        //    clsDataAccessGenerate.OnOperationExecuted -= clsDataAccessGenerate.GenerateInsertMethod;
-        //    clsDataAccessGenerate.OnOperationExecuted -= clsDataAccessGenerate.GenerateUpdateMethod;
-        //    clsDataAccessGenerate.OnOperationExecuted -= clsDataAccessGenerate.GenerateDeleteOperation;
-        //}
-        //void SubscribeToAllMethod()
-        //{
-            
-        //    clsDataAccessGenerate.OnOperationExecuted += clsDataAccessGenerate.GenerateInsertMethod;
-        //    clsDataAccessGenerate.OnOperationExecuted += clsDataAccessGenerate.GenerateUpdateMethod;
-        //    clsDataAccessGenerate.OnOperationExecuted += clsDataAccessGenerate.GenerateDeleteOperation;
-        //}
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             bool ChooseOperation = false;
@@ -45,21 +33,16 @@ namespace DataAccessLayer_Generator
             foreach (var item in chkTableList.CheckedItems)
             {
                 clsTableLogic Table = new clsTableLogic(item.ToString());
+                CustomMethod = new List<clsCustomGetBy> { new clsCustomGetBy(clsCustomGetBy.enMethods.GetBy, Table), new clsCustomGetBy(clsCustomGetBy.enMethods.DeleteBy, Table) };
                 if (ChooseOperation)
                 {   
-                    frmChooseOperations frmChooseOperations = new frmChooseOperations(Table);
+                    frmChooseOperations frmChooseOperations = new frmChooseOperations(Table, CustomMethod);
                     frmChooseOperations.ShowDialog();
                 }
-                else
-                {
-                    var pk = Table.GetPrimaryKey();
-                    if(pk!=null)
-                    pk.IsGetByEnabled = true;
-                    //SubscribeToAllMethod();
-                }
-                clsDataAccessGenerate.GenerateMethodOperation(Table);
-                //clsDataAccessGenerate.OnOperationExecuted = null;
+                
 
+                clsDataAccessGenerate.GenerateMethodOperation(Table,CustomMethod);
+                clsBussinessLayer_Generator.GenerateMethodOperation(Table,CustomMethod);
             }
             clsDataAccessGenerate.GenerateDataAccessSetting();
         }
@@ -84,25 +67,30 @@ namespace DataAccessLayer_Generator
         {
             clsSettings.SetConnectionString();
             LoadDataBasesToComboBox();
-
+            Tables = new List<clsTableLogic> { };
 
         }
-        void AddTablesToListBox()
+         void AddTablesToListBox(DataTable TablesList)
         {
-            DataTable TablesList = clsTableLogic.GetAllTheTables();
-            foreach(DataRow row in TablesList.Rows)
+            
+
+            foreach (DataRow row in TablesList.Rows)
             {
                 string TableName=row["TABLE_NAME"].ToString();
+                Tables.Add(new clsTableLogic(TableName));
                 chkTableList.Items.Add(TableName);
+                
             }
         }
 
-        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private async void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             chkTableList.Items.Clear();
             clsSettings.DBName =guna2ComboBox1.Text;
             clsSettings.SetConnectionString();
-            AddTablesToListBox();
+            DataTable tablesList = await Task.Run(() => clsTableLogic.GetAllTheTables());
+            AddTablesToListBox(tablesList);
+            
 
         }
 
@@ -112,7 +100,7 @@ namespace DataAccessLayer_Generator
             if(!string.IsNullOrWhiteSpace(folderBrowserDialog1.SelectedPath))
             MethodsPath=folderBrowserDialog1.SelectedPath;
             clsDataAccessGenerate.MethodsPath= MethodsPath;
-            
+            clsBussinessLayer_Generator.MethodsPath= MethodsPath;
 
         }
 
@@ -136,6 +124,21 @@ namespace DataAccessLayer_Generator
 
         private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
         {
+
+        }
+
+        private void chkTableList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var item=chkTableList.SelectedItem;
+            if(item==null) return;
+            foreach(var Table in Tables)
+            {
+                if(Table.TableName==item.ToString())
+                {
+                    dgvColumns.DataSource=Table.ColumnsList;
+                    return;
+                }
+            }
 
         }
     }

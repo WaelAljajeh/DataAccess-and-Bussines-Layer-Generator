@@ -62,5 +62,27 @@ namespace GloblalLibrary
 
             return conversion;
         }
+        public static string GetDefaultValue(string cSharpType)
+        {
+            switch (cSharpType)
+            {
+                case "int":
+                    return "-1";
+                case "string":
+                    return "\"\"";
+                case "DateTime":
+                    return "DateTime.MinValue";
+                case "byte":
+                    return "0";
+                case "double":
+                    return "0.0";
+                case "bool":
+                    return "false";
+                case "decimal":
+                    return "0.0m";
+                default:
+                    return "default";
+            }
+        }
     }
 }

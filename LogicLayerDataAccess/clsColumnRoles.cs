@@ -11,13 +11,19 @@ namespace LogicLayerDataAccess
     {
        public List<clsColumn> InsertCols;
        public List<clsColumn> UpdateCols;
-        List<clsColumn> DeleteCols;
-       public List<clsColumn> GetByCols;
+       public List<clsColumn> DeleteCols;
+       List<clsColumn> _GetByCols ;
+        clsTableLogic _Table;
         public clsColumnRoles(clsTableLogic Table)
         {
+            _Table = Table;
             InsertCols=Table.ColumnsList.Where(c => !c.IsPrimaryKey).ToList();
             UpdateCols = Table.ColumnsList;
-            GetByCols=Table.ColumnsList.Where(c=>!c.IsGetByEnabled).ToList();
+            DeleteCols=Table.ColumnsList;
+        }
+        public List<clsColumn> GetByCols(clsCustomGetBy GetBy)
+        {
+            return _Table.ColumnsList.Where(c=>!GetBy.GetByCols.Contains(c)).ToList();
         }
 
     }

@@ -1,0 +1,4 @@
+    public static bool Delete{TableName}({InputParameters})
+    {
+        return cls{TableName}Data.Delete{TableName}({InputParametersWithoutDataType});
+    }

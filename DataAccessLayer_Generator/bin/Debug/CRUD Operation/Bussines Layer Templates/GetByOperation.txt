@@ -1,0 +1,9 @@
+ public static cls{TableName} Get{TableName}By{ColumnNames}({InputParameters})
+    {
+        {FindVariablesDeclaration}
+        if (cls{TableName}Data.Get{TableName}By{ColumnNames}({InputParametersWithoutDataType},{refParametListWithoutDataType})
+        {
+            return new cls{TableName}({ConstructorParameter});
+        }
+        return null;
+    }
