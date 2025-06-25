@@ -11,22 +11,23 @@ namespace DataAccessLayerForCodeGenerator
 {
     public class clsDataBases
     {
-        public static DataTable GetDataBasesList()
+        public async static Task<DataTable> GetDataBasesList()
         {
             DataTable dt = new DataTable();
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
-                string query = @"Select * from sys.DataBases";
+                string query = @"Select * from sys.DataBases  ";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
 
                     try
                     {
-                        connection.Open();
-                        using (SqlDataReader reader = command.ExecuteReader())
+                      await connection.OpenAsync();
+                        using (SqlDataReader reader =await command.ExecuteReaderAsync())
                         {
                             if (reader.HasRows)
                             {
+                                
                                 dt.Load(reader);
                             }
                         }

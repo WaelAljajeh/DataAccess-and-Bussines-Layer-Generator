@@ -32,13 +32,16 @@
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSelectDataAccessPath = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.chkTableList = new System.Windows.Forms.CheckedListBox();
             this.chkSelectAll = new System.Windows.Forms.CheckBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.dgvColumns = new System.Windows.Forms.DataGridView();
+            this.btnSelectBussinesLayer = new Guna.UI2.WinForms.Guna2Button();
+            this.chkBussinesLayer = new System.Windows.Forms.CheckBox();
+            this.chkDataAccessLayer = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvColumns)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,24 +68,24 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
-            // guna2Button1
+            // btnSelectDataAccessPath
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BorderRadius = 21;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Black;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(-4, 631);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(223, 45);
-            this.guna2Button1.TabIndex = 1;
-            this.guna2Button1.Text = "Select ouput location";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btnSelectDataAccessPath.Animated = true;
+            this.btnSelectDataAccessPath.AutoRoundedCorners = true;
+            this.btnSelectDataAccessPath.BorderRadius = 21;
+            this.btnSelectDataAccessPath.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSelectDataAccessPath.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSelectDataAccessPath.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSelectDataAccessPath.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSelectDataAccessPath.FillColor = System.Drawing.Color.Black;
+            this.btnSelectDataAccessPath.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSelectDataAccessPath.ForeColor = System.Drawing.Color.White;
+            this.btnSelectDataAccessPath.Location = new System.Drawing.Point(-4, 631);
+            this.btnSelectDataAccessPath.Name = "btnSelectDataAccessPath";
+            this.btnSelectDataAccessPath.Size = new System.Drawing.Size(279, 45);
+            this.btnSelectDataAccessPath.TabIndex = 1;
+            this.btnSelectDataAccessPath.Text = "Select DataAccess_Location location";
+            this.btnSelectDataAccessPath.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2Button2
             // 
@@ -141,16 +144,60 @@
             this.dgvColumns.Size = new System.Drawing.Size(1086, 301);
             this.dgvColumns.TabIndex = 6;
             // 
+            // btnSelectBussinesLayer
+            // 
+            this.btnSelectBussinesLayer.Animated = true;
+            this.btnSelectBussinesLayer.AutoRoundedCorners = true;
+            this.btnSelectBussinesLayer.BorderRadius = 21;
+            this.btnSelectBussinesLayer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSelectBussinesLayer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSelectBussinesLayer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSelectBussinesLayer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSelectBussinesLayer.FillColor = System.Drawing.Color.Black;
+            this.btnSelectBussinesLayer.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSelectBussinesLayer.ForeColor = System.Drawing.Color.White;
+            this.btnSelectBussinesLayer.Location = new System.Drawing.Point(281, 631);
+            this.btnSelectBussinesLayer.Name = "btnSelectBussinesLayer";
+            this.btnSelectBussinesLayer.Size = new System.Drawing.Size(251, 45);
+            this.btnSelectBussinesLayer.TabIndex = 7;
+            this.btnSelectBussinesLayer.Text = "Select Bussines_Layer location";
+            this.btnSelectBussinesLayer.Click += new System.EventHandler(this.btnSelectBussinesLayer_Click);
+            // 
+            // chkBussinesLayer
+            // 
+            this.chkBussinesLayer.AutoSize = true;
+            this.chkBussinesLayer.Location = new System.Drawing.Point(12, 435);
+            this.chkBussinesLayer.Name = "chkBussinesLayer";
+            this.chkBussinesLayer.Size = new System.Drawing.Size(119, 21);
+            this.chkBussinesLayer.TabIndex = 8;
+            this.chkBussinesLayer.Text = "Bussines Layer";
+            this.chkBussinesLayer.UseVisualStyleBackColor = true;
+            this.chkBussinesLayer.CheckedChanged += new System.EventHandler(this.chkBussinesLayer_CheckedChanged);
+            // 
+            // chkDataAccessLayer
+            // 
+            this.chkDataAccessLayer.AutoSize = true;
+            this.chkDataAccessLayer.Location = new System.Drawing.Point(12, 504);
+            this.chkDataAccessLayer.Name = "chkDataAccessLayer";
+            this.chkDataAccessLayer.Size = new System.Drawing.Size(142, 21);
+            this.chkDataAccessLayer.TabIndex = 9;
+            this.chkDataAccessLayer.Text = "Data Access Layer";
+            this.chkDataAccessLayer.UseVisualStyleBackColor = true;
+            this.chkDataAccessLayer.CheckedChanged += new System.EventHandler(this.chkDataAccessLayer_CheckedChanged);
+            // 
             // frmSettiings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1512, 688);
+            this.Controls.Add(this.chkDataAccessLayer);
+            this.Controls.Add(this.chkBussinesLayer);
+            this.Controls.Add(this.btnSelectBussinesLayer);
             this.Controls.Add(this.dgvColumns);
             this.Controls.Add(this.chkSelectAll);
             this.Controls.Add(this.chkTableList);
             this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btnSelectDataAccessPath);
             this.Controls.Add(this.guna2ComboBox1);
             this.Name = "frmSettiings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -167,12 +214,15 @@
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnSelectDataAccessPath;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private System.Windows.Forms.CheckedListBox chkTableList;
         private System.Windows.Forms.CheckBox chkSelectAll;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.DataGridView dgvColumns;
+        private Guna.UI2.WinForms.Guna2Button btnSelectBussinesLayer;
+        private System.Windows.Forms.CheckBox chkBussinesLayer;
+        private System.Windows.Forms.CheckBox chkDataAccessLayer;
     }
 }

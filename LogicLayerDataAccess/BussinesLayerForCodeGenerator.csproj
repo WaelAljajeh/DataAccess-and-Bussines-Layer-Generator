@@ -41,11 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsBussinessLayer_Generator.cs" />
+    <Compile Include="clsGenerator.cs" />
     <Compile Include="clsColumnRoles.cs" />
     <Compile Include="clsCrudTemplate.cs" />
     <Compile Include="clsCustomGetBy.cs" />
-    <Compile Include="clsDataAccessGenerate.cs" />
     <Compile Include="clsDataBasesLogic.cs" />
     <Compile Include="clsGenerateMethod.cs" />
     <Compile Include="clsGetByMethod.cs" />

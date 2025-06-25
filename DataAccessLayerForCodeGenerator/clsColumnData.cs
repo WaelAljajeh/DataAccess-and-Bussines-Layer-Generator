@@ -10,7 +10,7 @@ namespace DataAccessLayerForCodeGenerator
     public class clsColumnData
     {
 
-        public static List<clsColumn> GetColumnsForTable(string tableName)
+        public async static Task<List<clsColumn>> GetColumnsForTable(string tableName)
         {
             var columns = new List<clsColumn>();
             string connectionString = clsDataAccessSettings.ConnectionString;
@@ -46,10 +46,10 @@ namespace DataAccessLayerForCodeGenerator
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@TableName", tableName);
 
-                conn.Open();
-                using (SqlDataReader reader = cmd.ExecuteReader())
+                await conn.OpenAsync();
+                using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
                 {
-                    while (reader.Read())
+                    while (await reader.ReadAsync())
                     {
                         string columnName = reader["COLUMN_NAME"].ToString();
                         string dataType = reader["DATA_TYPE"].ToString();

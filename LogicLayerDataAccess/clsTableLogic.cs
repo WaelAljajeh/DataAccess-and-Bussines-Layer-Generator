@@ -20,7 +20,13 @@ namespace LogicLayerDataAccess
         public clsTableLogic(string tableName)
         {
             TableName = tableName;
-            ColumnsList = clsColumnData.GetColumnsForTable(tableName);
+            //ColumnsList = clsColumnData.GetColumnsForTable(tableName);
+        }
+        public static async Task<clsTableLogic> CreateAsync(string tableName)
+        {
+            var tableLogic = new clsTableLogic(tableName);
+            tableLogic.ColumnsList = await clsColumnData.GetColumnsForTable(tableName);
+            return tableLogic;
         }
 
         public clsColumn GetPrimaryKey()

@@ -1,4 +1,4 @@
     private bool Update{TableName}()
     {
-        return cls{TableName}Data.Update{TableName}({ParameteList});
+        return cls{TableName}Data.Update{TableName}({Col});
     }

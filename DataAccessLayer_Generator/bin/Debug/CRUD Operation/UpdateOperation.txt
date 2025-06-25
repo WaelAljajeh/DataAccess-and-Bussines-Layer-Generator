@@ -3,7 +3,7 @@
            int result = 0;
            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionstring);
            string query = @"UPDATE {TableName}
-  SET {Col}
+  SET {SetClause}
 WHERE {PrimaryKeyID}=@{PrimaryKeyID}";
            SqlCommand command=new SqlCommand(query, connection);
            {Commands}

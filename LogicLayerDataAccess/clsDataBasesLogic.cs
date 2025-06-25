@@ -11,9 +11,9 @@ namespace LogicLayerDataAccess
     public class clsDataBasesLogic
     {
         public static string DBName { get { return clsSettings.DBName; } set { value = clsSettings.DBName; } }
-        public static DataTable GetAllDataBases()
+        public static async Task<DataTable> GetAllDataBases()
         {
-            return clsDataBases.GetDataBasesList();
+            return await clsDataBases.GetDataBasesList();
         }
     }
 }

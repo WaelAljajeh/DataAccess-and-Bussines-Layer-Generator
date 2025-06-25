@@ -9,47 +9,76 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
-
+using System.Threading;
+using System.Diagnostics;
 namespace DataAccessLayer_Generator
 {
     public partial class frmSettiings : Form
     {
-        string MethodsPath;
+        string DataAccessMethodsPath;
+        string BussinesMethodsPath;
         DataTable _dtDataBases;
         List<clsTableLogic> Tables;
         List<clsCustomGetBy> CustomMethod = new List<clsCustomGetBy> { };
+        clsGenerator BussinesGenerator;
+        clsGenerator DataAccesGenerator;
+        
         public frmSettiings()
         {
             InitializeComponent();
         }
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private async void guna2Button2_Click(object sender, EventArgs e)
         {
-            bool ChooseOperation = false;
-            if(MessageBox.Show("do you want to select your operation there are more features if you choose it manually","Info",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Information)==DialogResult.Yes)
+            Stopwatch stopwatch1 = Stopwatch.StartNew();
+
+            bool chooseOperation = false;
+            if (MessageBox.Show("Do you want to select your operation? There are more features if you choose manually.", "Info", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                ChooseOperation=true;
+                chooseOperation = true;
             }
-            
+
+            var tasks = new List<Task>();
+
             foreach (var item in chkTableList.CheckedItems)
             {
-                clsTableLogic Table = new clsTableLogic(item.ToString());
-                CustomMethod = new List<clsCustomGetBy> { new clsCustomGetBy(clsCustomGetBy.enMethods.GetBy, Table), new clsCustomGetBy(clsCustomGetBy.enMethods.DeleteBy, Table) };
-                if (ChooseOperation)
-                {   
-                    frmChooseOperations frmChooseOperations = new frmChooseOperations(Table, CustomMethod);
+                string tableName = item.ToString();
+                clsTableLogic table = await clsTableLogic.CreateAsync(tableName);
+
+                var customMethods = new List<clsCustomGetBy>
+        {
+            new clsCustomGetBy(clsCustomGetBy.enMethods.GetBy, table),
+            new clsCustomGetBy(clsCustomGetBy.enMethods.DeleteBy, table),
+            new clsCustomGetBy(clsCustomGetBy.enMethods.IsExistingBy, table)
+        };
+
+                if (chooseOperation)
+                {
+                    frmChooseOperations frmChooseOperations = new frmChooseOperations(table, customMethods);
                     frmChooseOperations.ShowDialog();
                 }
-                
 
-                clsDataAccessGenerate.GenerateMethodOperation(Table,CustomMethod);
-                clsBussinessLayer_Generator.GenerateMethodOperation(Table,CustomMethod);
+                // Run both generations in parallel for this table
+                if (!string.IsNullOrWhiteSpace(DataAccessMethodsPath))
+                {
+                    tasks.Add(Task.Run(() => DataAccesGenerator.GenerateMethodOperation(table, customMethods)));
+                }
+
+                if (!string.IsNullOrWhiteSpace(BussinesMethodsPath))
+                {
+                    tasks.Add(Task.Run(() => BussinesGenerator.GenerateMethodOperation(table, customMethods)));
+                }
             }
-            clsDataAccessGenerate.GenerateDataAccessSetting();
+
+            await Task.WhenAll(tasks); // Wait for all generation tasks
+
+            stopwatch1.Stop();
+            MessageBox.Show($"Classes generated successfully within {stopwatch1.ElapsedMilliseconds} ms!");
         }
-        void LoadDataBasesToComboBox()
+        async void LoadDataBasesToComboBox()
         {
+
+            _dtDataBases = await clsDataBasesLogic.GetAllDataBases();
             
-             _dtDataBases = clsDataBasesLogic.GetAllDataBases();
             if (_dtDataBases == null)
             {
 
@@ -68,16 +97,19 @@ namespace DataAccessLayer_Generator
             clsSettings.SetConnectionString();
             LoadDataBasesToComboBox();
             Tables = new List<clsTableLogic> { };
+            chkBussinesLayer.Checked = true;
+            chkDataAccessLayer.Checked = true;
 
         }
-         void AddTablesToListBox(DataTable TablesList)
+        async void AddTablesToListBox(DataTable TablesList)
         {
             
 
             foreach (DataRow row in TablesList.Rows)
             {
                 string TableName=row["TABLE_NAME"].ToString();
-                Tables.Add(new clsTableLogic(TableName));
+                
+                Tables.Add(await clsTableLogic.CreateAsync(TableName));
                 chkTableList.Items.Add(TableName);
                 
             }
@@ -98,9 +130,9 @@ namespace DataAccessLayer_Generator
         {
             folderBrowserDialog1.ShowDialog();
             if(!string.IsNullOrWhiteSpace(folderBrowserDialog1.SelectedPath))
-            MethodsPath=folderBrowserDialog1.SelectedPath;
-            clsDataAccessGenerate.MethodsPath= MethodsPath;
-            clsBussinessLayer_Generator.MethodsPath= MethodsPath;
+            DataAccessMethodsPath=folderBrowserDialog1.SelectedPath;
+            DataAccesGenerator = new clsGenerator(clsGenerator.enGenerateType.DataAccess, DataAccessMethodsPath);
+            
 
         }
 
@@ -114,7 +146,7 @@ namespace DataAccessLayer_Generator
 
         private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
-           MethodsPath=saveFileDialog1.FileName;
+           DataAccessMethodsPath =saveFileDialog1.FileName;
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -139,6 +171,27 @@ namespace DataAccessLayer_Generator
                     return;
                 }
             }
+
+        }
+
+        private void chkBussinesLayer_CheckedChanged(object sender, EventArgs e)
+        {
+
+            btnSelectBussinesLayer.Enabled = chkBussinesLayer.Checked;
+            
+        }
+
+        private void chkDataAccessLayer_CheckedChanged(object sender, EventArgs e)
+        {
+            btnSelectDataAccessPath.Enabled = chkDataAccessLayer.Checked;
+        }
+
+        private void btnSelectBussinesLayer_Click(object sender, EventArgs e)
+        {
+            folderBrowserDialog1.ShowDialog();
+            if (!string.IsNullOrWhiteSpace(folderBrowserDialog1.SelectedPath))
+                BussinesMethodsPath = folderBrowserDialog1.SelectedPath;
+            BussinesGenerator = new clsGenerator(clsGenerator.enGenerateType.Bussines, BussinesMethodsPath,DataAccessMethodsPath);
 
         }
     }

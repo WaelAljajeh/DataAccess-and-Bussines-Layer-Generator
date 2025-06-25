@@ -20,18 +20,18 @@ namespace LogicLayerDataAccess
        using System.Data.SqlClient;
        using System.Threading.Tasks;";
        }
-       static string _GetTheUsingHeaderforBussinessLayer(string dbName)
+       static string _GetTheUsingHeaderforBussinessLayer(string dbName,string DataAccessPath)
         {
-            return _GetTheUsingHeader()+Environment.NewLine+$"using DataAccess_{dbName};\n";
+            return _GetTheUsingHeader()+Environment.NewLine+$"using {DataAccessPath}_{dbName};\n";
         }
-        static string _GetTheNameSpaceHeaderForDataAccess(string dbName)
+        static string _GetTheNameSpaceHeaderForDataAccess(string dbName,string DataAccessPath)
         {
-            return $@"namespace DataAccess_{dbName}" +
+            return $@"namespace {DataAccessPath}_{dbName}" +
                   " {";
         }
-        static string _GetTheNameSpaceHeaderForBussines(string dbName)
+        static string _GetTheNameSpaceHeaderForBussines(string dbName,string BussinesPath)
         {
-            return $@"namesapce BussinesLayer_{dbName}
+            return $@"namesapce {BussinesPath}_{dbName}
                    {"{ "} 
                         ";
         }
@@ -63,17 +63,17 @@ namespace LogicLayerDataAccess
               {
               ";
         }
-        public static string GetTheDataSettingInfo(string DBName)
+        public static string GetTheDataSettingInfo(string DBName,string DataAccsesPath)
         {
-            return _GetTheUsingHeader() + _GetTheNameSpaceHeaderForDataAccess(DBName)+_GetTheDataSettingClass(clsDataAccessSettings.ConnectionString);
+            return _GetTheUsingHeader() + _GetTheNameSpaceHeaderForDataAccess(DBName,DataAccsesPath)+_GetTheDataSettingClass(clsDataAccessSettings.ConnectionString);
         }
-        public static string GetTheDataAccessClassInfo(string DBName,string TableName)
+        public static string GetTheDataAccessClassInfo(string DBName,string TableName,string DataAccsesPath)
         {
-            return _GetTheUsingHeader() + _GetTheNameSpaceHeaderForDataAccess(DBName)+_GetTheMainClassOfDataAccess(TableName);
+            return _GetTheUsingHeader() + _GetTheNameSpaceHeaderForDataAccess(DBName, DataAccsesPath) +_GetTheMainClassOfDataAccess(TableName);
         }
-        public static string GetTheBussinessClassInfo(string DBName,string TableName)
+        public static string GetTheBussinessClassInfo(string DBName,string TableName,string BussinesPath,string DataAccesPath)
         {
-            return _GetTheUsingHeaderforBussinessLayer(DBName)+_GetTheNameSpaceHeaderForBussines(DBName)+ _GetTheMainClassOfBussines(TableName);
+            return _GetTheUsingHeaderforBussinessLayer(DBName,DataAccesPath)+_GetTheNameSpaceHeaderForBussines(DBName,BussinesPath)+ _GetTheMainClassOfBussines(TableName);
         }
         public static string GetObjectConverted(List<clsColumn> ColList)
         {

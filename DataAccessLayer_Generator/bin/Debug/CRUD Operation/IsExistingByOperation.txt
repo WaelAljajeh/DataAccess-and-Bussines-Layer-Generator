@@ -1,0 +1,24 @@
+public static bool Is{TableName}ExistingBy{ColumnNames}({InputParameters})
+{
+    bool IsFound = false;
+    SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionstring);
+    string query = @"Select * from People Where {WhereClause}";
+    SqlCommand command=new SqlCommand(query, connection);
+    {Commands}
+    try {
+        connection.Open();
+        SqlDataReader reader = command.ExecuteReader();
+        if(reader.HasRows)
+        {
+            IsFound = true;
+        }
+        reader.Close();
+    }
+    catch(Exception ex)
+    {
+        Console.WriteLine("Error " + ex.ToString());
+    }
+    finally { connection.Close(); }
+    return IsFound;
+
+}

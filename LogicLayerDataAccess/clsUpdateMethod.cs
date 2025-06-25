@@ -24,7 +24,8 @@ namespace LogicLayerDataAccess
         {
             base.ReplaceTemplatePlaceHolderValue();
             TemplateContent.Replace("{ParameteList}", ParametersWithDataType);
-            TemplateContent.Replace("{Col}", clsGlobal.GetTheSetClauseInUpdateOperation(Roles.UpdateCols));
+            TemplateContent.Replace("{Col}", ParametersWithoutDataType);
+            TemplateContent.Replace("{SetClause}", clsGlobal.GetTheSetClauseInUpdateOperation(Roles.UpdateCols));
             TemplateContent.Replace("{Commands}", clsGlobal.GetCommandValues(Roles.UpdateCols));
             
         }

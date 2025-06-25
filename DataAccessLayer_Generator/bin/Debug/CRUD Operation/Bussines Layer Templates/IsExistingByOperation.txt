@@ -1,0 +1,4 @@
+    public static bool Is{TableName}Existing{ColumnNames}({InputParameters}) 
+    {
+        return cls{TableName}Data.Is{TableName}ExistingBy{ColumnNames}({InputParametersWithoutDataType});
+    }
